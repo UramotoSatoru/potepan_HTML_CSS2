@@ -1,0 +1,126 @@
+@media screen and (max-width: 1080px){
+/*heder*/
+.site-header {
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
+}
+/*potepan log リンク先がhome*/
+/*ハンバーガー*/
+.header-nav-hambuger{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 21px;
+    z-index: 100;
+}
+
+.header-nav-hambuger-line span,
+.header-nav-hambuger-line span:before,
+.header-nav-hambuger-line span:after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #222;
+    
+}
+
+.header-nav-hambuger-line span:before {
+    bottom: -10px;
+}
+.header-nav-hambuger-line span:after {
+    top: 20px;
+}
+
+#menu-btn-check:checked ~ .header-nav-hambuger-line span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    margin-top: 15px;
+}
+#menu-btn-check:checked ~ .header-nav-hambuger-line span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .header-nav-hambuger-line span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+
+
+/*<!--ナビバー-->*/    
+.header-nav-list{
+  overflow-y: scroll;
+  position: fixed;
+  top: 60px;
+  left: 100%;
+  width: 100%;
+  display: block;
+  padding-top:20px;
+  padding-bottom: 75px;
+  transition: transform 0.5s;
+  z-index: 99;
+  background-color: rgba(0,0,0,0.8);
+  webkit-overflow-scrolling: touch;
+  align-items:center;
+}
+
+
+
+.header-nav-list > li + li{
+  margin-left: 0;
+}
+
+.header-nav-item {
+  padding: 20px 0;
+}
+
+.header-button-outline {
+  margin-top: 20px;
+}
+.header-nav .header-nav-list > li + li {
+  margin-left: 0;
+}
+.header-nav .header-nav-item {
+  padding: 20px 0;
+}
+.header-nav .header-nav-item > span:first-child {
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: #fff;
+}
+.header-nav .header-nav-item > span:last-child {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #f79314;
+  letter-spacing: 2px;
+}
+
+.link-button.menu {
+    height: 60px;
+    font-size: 16px;
+}
+
+.header-button {
+    margin: 0 auto;
+    width: 250px;
+}
+
+/*#menu-btn-check:checkedが反映されない*/
+ #menu-btn-check:checked ~ .header-nav-list {
+    transform: translate3d(-100%, 0, 0);
+}
+/*<!--コース料金-->*/
+/*<!--POTEPAN CAMP コースについて  -->*/
+  /*<!--全コースの共通POINT-->*/
+  /*<!-- 選べる３コース -->*/
+  /*<!--コースプラン-->*/
+  /*受講内容*/
+  /*学習内容*/
+  
+}
